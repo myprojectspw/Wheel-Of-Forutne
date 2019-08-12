@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Final</title>
+  <meta charset="utf-8">
+      <script src="https://unpkg.com/konva@3.2.6/konva.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+   
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+   
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+   
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }	
+   
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+    }
+  </style>
+</head>
+<body>
+ 
+<nav class="navbar navbar-inverse grey-background">
+  <div class="container-fluid">
+	<p id="categoriaId" style="color:white;text-align:center;font-size:35px;">Categroy: category_text</p>
+	<!-- <p style="color:white;text-align:center;font-size:30px;">Hasło: HASŁO_TEXT</p> -->
+  </div>
+  <div class="column1">
+    <table id="myTable" class="table-responsive">
+        <tr>
+	<!--          <td class="tile"></td>
+          <td class="tile"></td>
+          <td class="tile"></td>
+          <td class="tile"></td>
+          <td class="tile"></td>
+          <td class="tile"></td>
+          <td class="tile"></td>
+          <td class="tile"></td>
+          <td class="tile"></td>
+          <td class="tile"></td>-->
+        </tr>
+	</table>
+  </div>
+</nav>
+ 
+<div class="container-fluid">
+
+  <div class="row content">
+  
+    <div class="col-sm-9">
+	<div id="container"></div>
+    </div>
+  
+    <div class="col-sm-3 sidenav">
+	  <h5 id="timer">Points: </h5>
+	  <div class="row">
+      <h6 id="player1" class="col-sm-12 col-xs-6"></h6>
+      <h4 id="player1Score" class="col-sm-12 col-xs-6"></h4>
+	  </div>
+    
+    <div class="row">
+			<form><input type="text" id="userPasswordInput" class="form-control col-sm-12 col-xs-6" name="login" placeholder="Hasło" required></form>  
+			<button id="passwordButton" class="btn btn-primary btn-sm btn-rounded col-sm-12 col-xs-12" type="submit">ZGADNIJ</button>
+		</div>
+
+    </div>
+  </div>
+  
+  <div class="row" style="background-color:green;">
+	<h3 id="infoRow">Information</h3>
+  </div>
+
+</div>
+
+<footer class="container-fluid text-center grey-background" id="letters_section">
+ <!-- <h3>Litery do wyboru</h3> -->
+</footer>
+
+<script src="script1.js"></script>
+</body>
+</html>

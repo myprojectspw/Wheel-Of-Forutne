@@ -1,0 +1,14 @@
+[Script]1<>-1[Index|openNewPage()]
+
+[Index|openNewPage()]1<>-1[STARTButton]
+[Index]<>-[login]
+
+[Game|setUp();update();nextPlayerTurn();getAverageAngularVelocity();purifyColor(color);getRandomColor();getRandomReward();addWedge();animate(frame);init()|target;activeWedge;stage;layer;wheel;pointer]
+[Script]1<>-1[Game]
+[player]3-<>1[Game]
+[playerScore]3-<>1[Game]
+
+[passwordButton]1-<>1[Game]
+[infoRow]1-<>1[Game]
+[userPasswordInput]1-<>1[Game]
+[myTable]1-<>1[Game]
