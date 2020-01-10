@@ -1,13 +1,20 @@
-//index
+
+//players Index.html
 var players = [];
 	function openNewPage()
 	{
+    //Get element login
 		var inputLogin = document.getElementById("login");
 		if (!inputLogin.checkValidity()) {
+      //Enter login
 			document.getElementById("msg").innerHTML = "Enter login";
 		} else {
 			//document.getElementById("msg").innerHTML = "OK";
-			var x = document.getElementById("login").value;
+      
+      //Get name of player
+      var x = document.getElementById("login").value;
+      
+      //While players count is different than 2
 			if(players.length != 2)
 			{
 				alert("Number of players = " + (players.length + 1));
@@ -15,10 +22,10 @@ var players = [];
 				players.push(x);
 				var input = document.getElementById("login");
 				input.value == ""
-			
-			}
+      }
 			else
 			{
+        //If players size is more than 3 open game.html
 				console.log(x);
 				players.push(x);
 				alert("Welcome");
@@ -30,7 +37,7 @@ var players = [];
 	}
 	
 	
-//game
+//Game.html 
  var p = sessionStorage.getItem("storageName");
   var players = p.split(",");
   var playersScore = [0,0,0];

@@ -7,6 +7,7 @@
 <title>Wheel of fortune</title>
 <style>
 
+	<!--CSS-->
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -69,7 +70,7 @@ span.psw {
 </style>
  
 </head>
-
+<!--Background strony-->
 <body style="background-image: url('background.jpg'); 
 		background-repeat: no-repeat; 
 		background-size: auto; 
@@ -78,17 +79,20 @@ span.psw {
 <div class="container">
 	<div class="row">
 		<div class="col-sm imgcontainer">
+			<!--Logo strony-->
 			<img src="logo.png" alt="avatar" class="avatar">
 		</div>
 
 		<div class="col-md-4 login-con">
 			<form><input type="text" id="login" class="form-control" name="login" placeholder="Login" required></form>  
 			<p id="msg"></p>
+			<!--Otwieramy nową stronę-->
 			<button id="STARTButton" class="btn btn-primary btn-sm btn-rounded" onclick="openNewPage();" type="submit">START</button>
 		</div>
 	</div>
 </div>
 
+<!--Opis zachowania-->
 <script src="script.js"></script>
 </body>
 </html>
