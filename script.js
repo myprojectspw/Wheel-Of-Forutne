@@ -38,22 +38,30 @@ var players = [];
 	
 	
 //Game.html 
+//Get items players to table
  var p = sessionStorage.getItem("storageName");
+
+ //Get to table
   var players = p.split(",");
   var playersScore = [0,0,0];
+
+  //Set players to document
   document.getElementById("player1").innerText = players[0];
   document.getElementById("player2").innerText = players[1];
   document.getElementById("player3").innerText = players[2];
 
+  //Set players score
   document.getElementById("player1Score").innerText = playersScore[0];
   document.getElementById("player2Score").innerText = playersScore[1];
   document.getElementById("player3Score").innerText = playersScore[2];
 
+  //Categories of password on screen
   var categoires = [
   ["Animals", "Wolf", "Dog"],
   ["Food", "Hamburger", "Pizza"],
   ["Films", "Terminator", "Matrix"]
 ];
+    //Create
     setUp();
     var password;
     var cell;
@@ -64,6 +72,8 @@ var players = [];
 	var isConsolantInPassword = false;
   var isVowelInPassword = false;
   var lettersAlreadyInPassword = "";
+
+  //Random position of cells
   function setUp()
   {
       var categoryId = Math.floor(Math.random()*3+0);
@@ -84,6 +94,8 @@ var players = [];
         cell[i] = row.insertCell(i);
       }
     }
+
+    //Update score and cells
     function update(){
       var clickCharacter;
       for (i = 0; i < size; i++) {
@@ -93,6 +105,7 @@ var players = [];
         }
       }
     }
+
     function nextPlayerTur(){
       if(currentPlayer > 3){
         currentPlayer = 0
@@ -100,9 +113,11 @@ var players = [];
       else 
         currentPlayer++;
     }
-		////
+		//Alphabet to upper case
     var alphabet = ("abcdefghijklmnopqrstuvwxyz").toUpperCase();
     
+
+    //Display information
     function displayInformation(message) {
       $('#infoRow').fadeOut(500, function() {
         $('#infoRow').text(message);
